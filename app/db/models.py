@@ -16,6 +16,7 @@ class StatusDocumento(StrEnum):
 class Base(DeclarativeBase):
     pass
 
+
 class Documento(Base):
     __tablename__ = "documentos"
 
@@ -25,5 +26,6 @@ class Documento(Base):
     status: Mapped[str] = mapped_column(default=StatusDocumento.PENDENTE)
     texto: Mapped[str | None]
     erro: Mapped[str | None]
-    criado_em: Mapped[datetime] = mapped_column(DateTime(timezone=True), server_default=func.now())
-
+    criado_em: Mapped[datetime] = mapped_column(
+        DateTime(timezone=True), server_default=func.now()
+    )

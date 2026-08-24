@@ -4,7 +4,7 @@ from app.db.models import Base
 from app.deps import engine
 
 
-async def criar_tabelas()->None:
+async def criar_tabelas() -> None:
     async with engine.begin() as conn:
         await conn.run_sync(Base.metadata.create_all)
     await engine.dispose()
