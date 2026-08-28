@@ -8,6 +8,7 @@ class Settings(BaseSettings):
     database_url: str
     elasticsearch_url: str
     upload_dir: Path = Path("data/uploads")
+    spacy_model: str = "pt_core_news_sm"
 
 
 settings = Settings()
