@@ -2,7 +2,8 @@ import asyncio
 import uuid
 
 from app.db.models import Documento, StatusDocumento
-from app.deps import SessionLocal
+from app.deps import SessionLocal, nlp
+from app.pipeline.anonymize import anonimizar
 from app.pipeline.extract import extrair_texto
 
 
@@ -19,7 +20,8 @@ async def processar_documento(doc_id: uuid.UUID) -> None:
 
     # processamento (na prática)
     try:
-        texto = await asyncio.to_thread(extrair_texto, caminho)
+        texto_bruto = await asyncio.to_thread(extrair_texto, caminho)
+        texto, _mapa = await asyncio.to_thread(anonimizar, texto_bruto, nlp)
         status_fim, erro = StatusDocumento.CONCLUIDO, None
 
     except Exception as e:
