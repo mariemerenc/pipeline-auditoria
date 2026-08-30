@@ -17,5 +17,6 @@ class DocumentoDetalhe(BaseModel):
     id: uuid.UUID
     nome_arquivo: str
     status: str
+    entidades: dict[str, list[str]] | None
     erro: str | None
     criado_em: datetime

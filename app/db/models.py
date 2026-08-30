@@ -3,6 +3,7 @@ from datetime import datetime
 from enum import StrEnum
 
 from sqlalchemy import DateTime, func
+from sqlalchemy.dialects.postgresql import JSONB
 from sqlalchemy.orm import DeclarativeBase, Mapped, mapped_column
 
 
@@ -25,6 +26,7 @@ class Documento(Base):
     caminho_arquivo: Mapped[str]
     status: Mapped[str] = mapped_column(default=StatusDocumento.PENDENTE)
     texto: Mapped[str | None]
+    entidades: Mapped[dict | None] = mapped_column(JSONB)
     erro: Mapped[str | None]
     criado_em: Mapped[datetime] = mapped_column(
         DateTime(timezone=True), server_default=func.now()
