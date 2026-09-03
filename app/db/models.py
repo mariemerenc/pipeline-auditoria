@@ -2,7 +2,8 @@ import uuid
 from datetime import datetime
 from enum import StrEnum
 
-from sqlalchemy import DateTime, func
+from pgvector.sqlalchemy import Vector
+from sqlalchemy import DateTime, ForeignKey, func
 from sqlalchemy.dialects.postgresql import JSONB
 from sqlalchemy.orm import DeclarativeBase, Mapped, mapped_column
 
@@ -31,3 +32,15 @@ class Documento(Base):
     criado_em: Mapped[datetime] = mapped_column(
         DateTime(timezone=True), server_default=func.now()
     )
+
+
+class Chunk(Base):
+    __tablename__ = "chunks"
+
+    id: Mapped[uuid.UUID] = mapped_column(primary_key=True, default=uuid.uuid4)
+    documento_id: Mapped[uuid.UUID] = mapped_column(
+        ForeignKey("documentos.id", ondelete="CASCADE"), index=True
+    )
+    ordem: Mapped[int]
+    texto: Mapped[str]
+    embedding: Mapped[list[float]] = mapped_column(Vector(384))

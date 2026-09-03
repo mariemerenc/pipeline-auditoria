@@ -9,6 +9,9 @@ class Settings(BaseSettings):
     elasticsearch_url: str
     upload_dir: Path = Path("data/uploads")
     spacy_model: str = "pt_core_news_lg"
+    embedding_model: str = "intfloat/multilingual-e5-small"
+    chunk_tam: int = 800
+    chunk_sobrepos: int = 100
 
 
 settings = Settings()

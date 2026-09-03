@@ -1,9 +1,12 @@
 import asyncio
 import uuid
 
-from app.db.models import Documento, StatusDocumento
+from app.config import settings
+from app.db.models import Chunk, Documento, StatusDocumento
 from app.deps import SessionLocal, nlp
 from app.pipeline.anonymize import anonimizar
+from app.pipeline.chunk import dividir
+from app.pipeline.embed import embutir_passagens
 from app.pipeline.entities import extrair_entidades
 from app.pipeline.extract import extrair_texto
 
@@ -24,10 +27,14 @@ async def processar_documento(doc_id: uuid.UUID) -> None:
         texto_bruto = await asyncio.to_thread(extrair_texto, caminho)
         entidades = extrair_entidades(texto_bruto)
         texto, _mapa = await asyncio.to_thread(anonimizar, texto_bruto, nlp)
+        # os chunks guardam o texto já anonimizado
+        pedacos = dividir(texto, settings.chunk_tam, settings.chunk_sobrepos)
+        vetores = await asyncio.to_thread(embutir_passagens, pedacos)
         status_fim, erro = StatusDocumento.CONCLUIDO, None
 
-    except Exception as e:
+    except Exception as e: 
         texto, entidades = None, None
+        pedacos, vetores = [], []
         status_fim, erro = StatusDocumento.ERRO, str(e)
 
     # salvando resultado
@@ -37,4 +44,10 @@ async def processar_documento(doc_id: uuid.UUID) -> None:
         doc.erro = erro
         doc.texto = texto
         doc.entidades = entidades
+        session.add_all(
+            [
+                Chunk(documento_id=doc_id, ordem=i, texto=t, embedding=v)
+                for i, (t, v) in enumerate(zip(pedacos, vetores, strict=True))
+            ]
+        )
         await session.commit()
