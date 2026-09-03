@@ -5,11 +5,13 @@ from fastapi.responses import JSONResponse
 from sqlalchemy import text
 
 from app.deps import engine, es
+from app.pipeline.index import garantir_indice
 from app.routers import documentos
 
 
 @asynccontextmanager
 async def lifespan(app: FastAPI):
+    await garantir_indice(es)
     yield
     await es.close()
     await engine.dispose()

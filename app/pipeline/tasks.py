@@ -3,12 +3,13 @@ import uuid
 
 from app.config import settings
 from app.db.models import Chunk, Documento, StatusDocumento
-from app.deps import SessionLocal, nlp
+from app.deps import SessionLocal, es, nlp
 from app.pipeline.anonymize import anonimizar
 from app.pipeline.chunk import dividir
 from app.pipeline.embed import embutir_passagens
 from app.pipeline.entities import extrair_entidades
 from app.pipeline.extract import extrair_texto
+from app.pipeline.index import indexar
 
 
 async def processar_documento(doc_id: uuid.UUID) -> None:
@@ -44,10 +45,14 @@ async def processar_documento(doc_id: uuid.UUID) -> None:
         doc.erro = erro
         doc.texto = texto
         doc.entidades = entidades
-        session.add_all(
-            [
-                Chunk(documento_id=doc_id, ordem=i, texto=t, embedding=v)
-                for i, (t, v) in enumerate(zip(pedacos, vetores, strict=True))
-            ]
-        )
+
+        chunks = [
+            Chunk(documento_id=doc_id, ordem=i, texto=t, embedding=v)
+            for i, (t,v) in enumerate(zip(pedacos, vetores, strict=True))
+        ]
+
+        session.add_all(chunks)
         await session.commit()
+
+    if chunks:
+        await indexar(es, doc_id, chunks)
