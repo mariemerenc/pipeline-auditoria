@@ -6,7 +6,7 @@ from sqlalchemy import text
 
 from app.deps import engine, es
 from app.pipeline.index import garantir_indice
-from app.routers import busca, documentos
+from app.routers import busca, documentos, perguntar
 
 
 @asynccontextmanager
@@ -20,6 +20,7 @@ async def lifespan(app: FastAPI):
 app = FastAPI(lifespan=lifespan)
 app.include_router(documentos.router)
 app.include_router(busca.router)
+app.include_router(perguntar.router)
 
 
 @app.get("/health")
