@@ -55,6 +55,21 @@ TOOLS = [
             "required": ["documento_id"],
         },
     },
+    {
+        "name": "avaliar_anomalia",
+        "description": (
+            "avalia se um contrato foge do padrão histórico do fornecedor. devolve score, veredito e as features que o justificam."
+        ),
+        "input_schema": {
+            "type": "object",
+            "properties": {
+                "fornecedor": {"type": "string"},
+                "mes": {"type": "integer", "description": "1 a 12"},
+                "valor": {"type": "number", "description": "valor em reais"},
+            },
+            "required": ["fornecedor", "mes", "valor"],
+        },
+    },
 ]
 
 
@@ -68,6 +83,8 @@ def _executar(nome: str, args: dict) -> str:
             )
         elif nome == "detalhar_documento":
             r = http.get(f"{API}/documentos/{args['documento_id']}")
+        elif nome == "avaliar_anomalia":
+            r = http.post(f"{API}/anomalias/avaliar", json=args)
         else:
             return json.dumps({"erro": f"ferramenta desconhecida: {nome}"})
         r.raise_for_status()

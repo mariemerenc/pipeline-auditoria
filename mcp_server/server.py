@@ -53,5 +53,29 @@ async def detalhar_documento(documento_id: str) -> dict:
         return r.json()
 
 
+@mcp.tool
+async def avaliar_anomalia(fornecedor: str, mes: int, valor: float) -> dict:
+    """avalia se um contrato foge do padrão histórico daquele fornecedor.
+
+    compara o valor com a mediana histórica do fornecedor, a variação diante 
+    do contrato anterior e a frequência de contratos no mês. retorna o score,
+    o veredito e as features que o justificam.
+
+    args:
+        fornecedor: razão social como aparece no histórico.
+        mes: mês do contrato, de 1 a 12
+        valor: valor do contrato em reais
+    """
+    async with httpx.AsyncClient(timeout=TIMEOUT) as cliente:
+        r = await cliente.post(
+            f"{API}/anomalias/avaliar",
+            json={"fornecedor": fornecedor, "mes": mes, "valor": valor},
+        )
+        
+        r.raise_for_status()
+
+        return r.json()
+
+
 if __name__ == "__main__":
     mcp.run()

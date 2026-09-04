@@ -12,6 +12,7 @@ class Settings(BaseSettings):
     embedding_model: str = "intfloat/multilingual-e5-small"
     chunk_tam: int = 800
     chunk_sobrepos: int = 100
+    historico_csv: Path = Path("data/seed/historico_financeiro.csv")
     llm_model: str = "claude-haiku-4-5"
     anthropic_api_key: str | None = None
 
