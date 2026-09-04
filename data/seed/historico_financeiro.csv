@@ -1,0 +1,201 @@
+fornecedor,mes,valor,anomalia
+Construtora Fachada,1,74424.22,0
+Construtora Fachada,2,89622.78,0
+Construtora Fachada,3,112580.05,0
+Construtora Fachada,4,108103.84,0
+Construtora Fachada,4,117751.35,0
+Construtora Fachada,5,1230864.47,1
+Construtora Fachada,6,117000.66,0
+Construtora Fachada,7,124316.67,0
+Construtora Fachada,8,111948.69,0
+Construtora Fachada,9,141802.76,0
+Construtora Fachada,10,154569.11,0
+Construtora Fachada,11,161558.9,0
+Construtora Fachada,12,239701.93,0
+Consultoria Aurora,6,480000.0,1
+Engenharia Delta,1,166921.53,0
+Engenharia Delta,2,231397.97,0
+Engenharia Delta,3,236369.68,0
+Engenharia Delta,4,232367.11,0
+Engenharia Delta,5,260177.86,0
+Engenharia Delta,6,262486.18,0
+Engenharia Delta,6,317627.86,0
+Engenharia Delta,7,240395.48,0
+Engenharia Delta,8,270933.26,0
+Engenharia Delta,9,259909.02,0
+Engenharia Delta,10,292996.61,0
+Engenharia Delta,10,319077.59,0
+Engenharia Delta,11,356943.49,0
+Engenharia Delta,12,470558.95,0
+Equipe Medicos Psi,1,123840.35,0
+Equipe Medicos Psi,1,132337.09,0
+Equipe Medicos Psi,2,128175.95,0
+Equipe Medicos Psi,3,150252.17,0
+Equipe Medicos Psi,4,187437.14,0
+Equipe Medicos Psi,4,190149.51,0
+Equipe Medicos Psi,5,162823.21,0
+Equipe Medicos Psi,5,164480.25,0
+Equipe Medicos Psi,6,205441.37,0
+Equipe Medicos Psi,7,171067.85,0
+Equipe Medicos Psi,7,180067.78,0
+Equipe Medicos Psi,8,193055.0,0
+Equipe Medicos Psi,9,214500.72,0
+Equipe Medicos Psi,9,206857.65,0
+Equipe Medicos Psi,10,186049.23,0
+Equipe Medicos Psi,10,221922.85,0
+Equipe Medicos Psi,11,270331.97,0
+Equipe Medicos Psi,12,342523.24,0
+Equipe Medicos Psi,12,338492.65,0
+Eventos Boreal,11,520000.0,1
+Indústrias Panacea,1,132170.45,0
+Indústrias Panacea,2,165684.56,0
+Indústrias Panacea,2,164190.63,0
+Indústrias Panacea,3,189898.28,0
+Indústrias Panacea,4,194213.86,0
+Indústrias Panacea,5,206719.99,0
+Indústrias Panacea,5,202733.59,0
+Indústrias Panacea,6,238102.58,0
+Indústrias Panacea,7,186994.31,0
+Indústrias Panacea,7,177540.81,0
+Indústrias Panacea,8,188851.56,0
+Indústrias Panacea,9,243385.63,0
+Indústrias Panacea,10,229325.45,0
+Indústrias Panacea,10,248953.27,0
+Indústrias Panacea,11,307857.6,0
+Indústrias Panacea,12,339685.65,0
+JojaMart Alimentos,1,37657.66,0
+JojaMart Alimentos,2,51062.41,0
+JojaMart Alimentos,2,43719.07,0
+JojaMart Alimentos,3,710390.85,1
+JojaMart Alimentos,4,65363.04,0
+JojaMart Alimentos,5,55849.89,0
+JojaMart Alimentos,6,69642.11,0
+JojaMart Alimentos,7,57288.71,0
+JojaMart Alimentos,8,62158.24,0
+JojaMart Alimentos,8,59108.64,0
+JojaMart Alimentos,9,59996.71,0
+JojaMart Alimentos,10,69202.12,0
+JojaMart Alimentos,11,78559.11,0
+JojaMart Alimentos,12,96880.14,0
+Limpeza Lambda,1,28421.16,0
+Limpeza Lambda,2,39002.35,0
+Limpeza Lambda,3,43485.29,0
+Limpeza Lambda,4,45391.26,0
+Limpeza Lambda,5,43688.17,0
+Limpeza Lambda,5,45562.04,0
+Limpeza Lambda,6,50908.01,0
+Limpeza Lambda,6,53797.08,0
+Limpeza Lambda,7,47209.38,0
+Limpeza Lambda,8,42061.3,0
+Limpeza Lambda,9,44507.93,0
+Limpeza Lambda,10,48828.98,0
+Limpeza Lambda,11,65051.55,0
+Limpeza Lambda,12,78476.32,0
+Locacao Meridiano,9,390000.0,1
+Manutencao Epsilon,1,45522.09,0
+Manutencao Epsilon,1,51542.42,0
+Manutencao Epsilon,2,54599.36,0
+Manutencao Epsilon,3,59975.96,0
+Manutencao Epsilon,4,74231.32,0
+Manutencao Epsilon,5,69299.2,0
+Manutencao Epsilon,6,86167.86,0
+Manutencao Epsilon,6,69113.86,0
+Manutencao Epsilon,7,66055.37,0
+Manutencao Epsilon,8,76398.52,0
+Manutencao Epsilon,8,76371.74,0
+Manutencao Epsilon,9,70675.16,0
+Manutencao Epsilon,10,88103.36,0
+Manutencao Epsilon,10,86251.42,0
+Manutencao Epsilon,10,16800.0,1
+Manutencao Epsilon,10,16800.0,1
+Manutencao Epsilon,10,16800.0,1
+Manutencao Epsilon,10,16800.0,1
+Manutencao Epsilon,10,16800.0,1
+Manutencao Epsilon,11,101621.52,0
+Manutencao Epsilon,11,86424.0,0
+Manutencao Epsilon,12,119933.21,0
+Manutencao Epsilon,12,130940.87,0
+Obras Beta,1,213602.57,0
+Obras Beta,2,275011.12,0
+Obras Beta,3,263156.53,0
+Obras Beta,3,279039.25,0
+Obras Beta,4,340699.51,0
+Obras Beta,5,295004.29,0
+Obras Beta,5,320337.84,0
+Obras Beta,6,312588.37,0
+Obras Beta,7,312929.8,0
+Obras Beta,7,330729.81,0
+Obras Beta,8,272842.55,0
+Obras Beta,9,301673.98,0
+Obras Beta,10,405812.29,0
+Obras Beta,10,401611.1,0
+Obras Beta,11,387953.49,0
+Obras Beta,12,617855.47,0
+Obras Beta,12,502510.71,0
+Papelaria Gama,1,8242.51,0
+Papelaria Gama,2,9023.55,0
+Papelaria Gama,3,10652.59,0
+Papelaria Gama,3,11736.62,0
+Papelaria Gama,4,10705.69,0
+Papelaria Gama,5,12967.76,0
+Papelaria Gama,5,13350.71,0
+Papelaria Gama,6,14304.67,0
+Papelaria Gama,6,12142.87,0
+Papelaria Gama,7,11175.59,0
+Papelaria Gama,7,2880.0,1
+Papelaria Gama,7,2880.0,1
+Papelaria Gama,7,2880.0,1
+Papelaria Gama,7,2880.0,1
+Papelaria Gama,7,2880.0,1
+Papelaria Gama,8,10728.87,0
+Papelaria Gama,9,14737.46,0
+Papelaria Gama,10,15381.75,0
+Papelaria Gama,11,16489.57,0
+Papelaria Gama,12,24168.27,0
+Papelaria Gama,12,21889.1,0
+TI Alfa,1,60376.34,0
+TI Alfa,2,69380.44,0
+TI Alfa,3,74652.99,0
+TI Alfa,3,71346.73,0
+TI Alfa,4,85194.34,0
+TI Alfa,4,76654.55,0
+TI Alfa,5,77036.84,0
+TI Alfa,6,100054.26,0
+TI Alfa,7,76095.97,0
+TI Alfa,8,856087.92,1
+TI Alfa,9,104071.0,0
+TI Alfa,10,90041.06,0
+TI Alfa,10,107403.27,0
+TI Alfa,11,120055.87,0
+TI Alfa,12,158176.12,0
+Transportes Supercontinent,1,62173.91,0
+Transportes Supercontinent,2,82559.75,0
+Transportes Supercontinent,2,68172.44,0
+Transportes Supercontinent,3,88967.42,0
+Transportes Supercontinent,4,86616.71,0
+Transportes Supercontinent,5,96619.78,0
+Transportes Supercontinent,5,94376.9,0
+Transportes Supercontinent,6,112212.02,0
+Transportes Supercontinent,6,96735.48,0
+Transportes Supercontinent,7,93427.97,0
+Transportes Supercontinent,8,94248.16,0
+Transportes Supercontinent,9,108847.98,0
+Transportes Supercontinent,10,103012.71,0
+Transportes Supercontinent,10,111335.72,0
+Transportes Supercontinent,11,144544.59,0
+Transportes Supercontinent,12,158286.17,0
+Uniformes Zeta,1,21072.51,0
+Uniformes Zeta,1,20967.94,0
+Uniformes Zeta,2,26737.22,0
+Uniformes Zeta,3,30447.23,0
+Uniformes Zeta,4,30652.49,0
+Uniformes Zeta,5,31130.75,0
+Uniformes Zeta,6,39831.29,0
+Uniformes Zeta,7,29771.0,0
+Uniformes Zeta,7,32394.72,0
+Uniformes Zeta,8,29068.08,0
+Uniformes Zeta,9,37494.53,0
+Uniformes Zeta,9,34226.15,0
+Uniformes Zeta,10,40091.17,0
+Uniformes Zeta,11,40763.22,0
+Uniformes Zeta,12,64861.56,0
